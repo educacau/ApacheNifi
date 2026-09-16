@@ -20,7 +20,15 @@
     "externalControllerServiceReferences" : { },
     "flowFileConcurrency" : "UNBOUNDED",
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
-    "funnels" : [ ],
+    "funnels" : [ {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "e76b2bf4-8826-309c-b2ed-9e6138024b19",
+      "position" : {
+        "x" : 651.0,
+        "y" : 149.3333282470703
+      }
+    } ],
     "identifier" : "flow-contents-group",
     "inputPorts" : [ ],
     "labels" : [ ],
@@ -44,6 +52,6 @@
   "snapshotMetadata" : {
     "author" : "nifi-dev",
     "flowIdentifier" : "Fluxo1",
-    "timestamp" : 1789590471332
+    "timestamp" : 1789591120310
   }
 }

@@ -220,7 +220,14 @@
       "processors" : [ ],
       "remoteProcessGroups" : [ ],
       "scheduledState" : "ENABLED",
-      "statelessFlowTimeout" : "1 min"
+      "statelessFlowTimeout" : "1 min",
+      "versionedFlowCoordinates" : {
+        "branch" : "main",
+        "bucketId" : "develop",
+        "flowId" : "Fluxo1",
+        "storageLocation" : "git@github.com:educacau/ApacheNifi.git",
+        "version" : "86237bdc347d138b04f99127bad43304181629f2"
+      }
     } ],
     "processors" : [ ],
     "remoteProcessGroups" : [ ],
@@ -234,6 +241,6 @@
   "snapshotMetadata" : {
     "author" : "nifi-dev",
     "flowIdentifier" : "SharedVersion",
-    "timestamp" : 1789590450189
+    "timestamp" : 1789591021093
   }
 }

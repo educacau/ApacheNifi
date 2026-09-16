@@ -344,7 +344,7 @@
         "bucketId" : "apachenifi",
         "flowId" : "Fluxo-1",
         "storageLocation" : "git@github.com:educacau/ApacheNifi.git",
-        "version" : "bb06bd40925319d6693f1552837146bacfcf6e96"
+        "version" : "6c11a230c1986171fd6cbcfddf46f1ec91d13267"
       }
     } ],
     "processors" : [ ],
@@ -359,6 +359,6 @@
   "snapshotMetadata" : {
     "author" : "nifi-dev",
     "flowIdentifier" : "Teste-GitHub-Flow",
-    "timestamp" : 1789594664499
+    "timestamp" : 1789595194777
   }
 }

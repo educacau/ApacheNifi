@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1789593085738,
+    "description" : "Teste do fluxo completo commit-PR-import",
+    "identifier" : "Teste-GitHub-Flow",
+    "lastModifiedTimestamp" : 1789593085738,
+    "name" : "Teste GitHub Flow",
+    "versionCount" : 0
+  },
+  "latest" : false
+}

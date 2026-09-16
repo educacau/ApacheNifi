@@ -1,4 +1,14 @@
 {
+  "externalControllerServices" : {
+    "9a925751-4a1c-33c9-815b-aeac0b3f5096" : {
+      "identifier" : "9a925751-4a1c-33c9-815b-aeac0b3f5096",
+      "name" : "AvroReaderGit"
+    },
+    "0a978ccf-440f-3e12-a0d9-f20c1e96e4db" : {
+      "identifier" : "0a978ccf-440f-3e12-a0d9-f20c1e96e4db",
+      "name" : "AvroRecordSetWriterGit"
+    }
+  },
   "flow" : {
     "createdTimestamp" : 1789594209414,
     "description" : "",
@@ -7,5 +17,110 @@
     "name" : "Fluxo 1",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : {
+      "9a925751-4a1c-33c9-815b-aeac0b3f5096" : {
+        "identifier" : "9a925751-4a1c-33c9-815b-aeac0b3f5096",
+        "name" : "AvroReaderGit"
+      },
+      "0a978ccf-440f-3e12-a0d9-f20c1e96e4db" : {
+        "identifier" : "0a978ccf-440f-3e12-a0d9-f20c1e96e4db",
+        "name" : "AvroRecordSetWriterGit"
+      }
+    },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "fluxo 1",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.12.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "067a38e5-38aa-32a8-b9f7-a4857f5ecd36",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "ConvertRecord",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 483.0,
+        "y" : 95.33332824707031
+      },
+      "properties" : {
+        "Include Zero Record FlowFiles" : "true",
+        "Record Writer" : "0a978ccf-440f-3e12-a0d9-f20c1e96e4db",
+        "Record Reader" : "9a925751-4a1c-33c9-815b-aeac0b3f5096"
+      },
+      "propertyDescriptors" : {
+        "Include Zero Record FlowFiles" : {
+          "displayName" : "Include Zero Record FlowFiles",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include Zero Record FlowFiles",
+          "sensitive" : false
+        },
+        "Record Writer" : {
+          "displayName" : "Record Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Record Writer",
+          "sensitive" : false
+        },
+        "Record Reader" : {
+          "displayName" : "Record Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Record Reader",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ConvertRecord",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "author" : "nifi-dev",
+    "flowIdentifier" : "Fluxo-1",
+    "timestamp" : 1789594210791
+  }
 }

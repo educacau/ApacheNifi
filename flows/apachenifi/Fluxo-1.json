@@ -7,6 +7,10 @@
     "0a978ccf-440f-3e12-a0d9-f20c1e96e4db" : {
       "identifier" : "0a978ccf-440f-3e12-a0d9-f20c1e96e4db",
       "name" : "AvroRecordSetWriterGit"
+    },
+    "8ba65dea-2eee-3179-9a8e-3720c79c9bc5" : {
+      "identifier" : "8ba65dea-2eee-3179-9a8e-3720c79c9bc5",
+      "name" : "MongoDBControllerService"
     }
   },
   "flow" : {
@@ -34,6 +38,10 @@
       "0a978ccf-440f-3e12-a0d9-f20c1e96e4db" : {
         "identifier" : "0a978ccf-440f-3e12-a0d9-f20c1e96e4db",
         "name" : "AvroRecordSetWriterGit"
+      },
+      "8ba65dea-2eee-3179-9a8e-3720c79c9bc5" : {
+        "identifier" : "8ba65dea-2eee-3179-9a8e-3720c79c9bc5",
+        "name" : "MongoDBControllerService"
       }
     },
     "flowFileConcurrency" : "UNBOUNDED",
@@ -109,6 +117,152 @@
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.ConvertRecord",
       "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-mongodb-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.12.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "40def8e5-26f4-3ae9-908c-28223ccaa17b",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "GetMongo",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 456.0,
+        "y" : 240.0
+      },
+      "properties" : {
+        "JSON Type" : "Extended",
+        "Pretty Print Results JSON" : "true",
+        "Send Empty Result" : "false",
+        "Date Format" : "yyyy-MM-dd'T'HH:mm:ss'Z'",
+        "Client Service" : "8ba65dea-2eee-3179-9a8e-3720c79c9bc5",
+        "Character Set" : "UTF-8"
+      },
+      "propertyDescriptors" : {
+        "Query Output Attribute" : {
+          "displayName" : "Query Output Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Query Output Attribute",
+          "sensitive" : false
+        },
+        "Query" : {
+          "displayName" : "Query",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Query",
+          "sensitive" : false
+        },
+        "JSON Type" : {
+          "displayName" : "JSON Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "JSON Type",
+          "sensitive" : false
+        },
+        "Projection" : {
+          "displayName" : "Projection",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Projection",
+          "sensitive" : false
+        },
+        "Results Per FlowFile" : {
+          "displayName" : "Results Per FlowFile",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Results Per FlowFile",
+          "sensitive" : false
+        },
+        "Mongo Database Name" : {
+          "displayName" : "Mongo Database Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Mongo Database Name",
+          "sensitive" : false
+        },
+        "Pretty Print Results JSON" : {
+          "displayName" : "Pretty Print Results JSON",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Pretty Print Results JSON",
+          "sensitive" : false
+        },
+        "Send Empty Result" : {
+          "displayName" : "Send Empty Result",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Send Empty Result",
+          "sensitive" : false
+        },
+        "Date Format" : {
+          "displayName" : "Date Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Date Format",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Mongo Collection Name" : {
+          "displayName" : "Mongo Collection Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Mongo Collection Name",
+          "sensitive" : false
+        },
+        "Sort" : {
+          "displayName" : "Sort",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Sort",
+          "sensitive" : false
+        },
+        "Limit" : {
+          "displayName" : "Limit",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Limit",
+          "sensitive" : false
+        },
+        "Client Service" : {
+          "displayName" : "Client Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Client Service",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.mongodb.GetMongo",
+      "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
     "scheduledState" : "ENABLED",
@@ -121,6 +275,6 @@
   "snapshotMetadata" : {
     "author" : "nifi-dev",
     "flowIdentifier" : "Fluxo-1",
-    "timestamp" : 1789594210791
+    "timestamp" : 1789594679110
   }
 }
